@@ -1,0 +1,33 @@
+@import "compass";
+@import "screen";
+
+body {
+  background: #333;
+  font-family: "Helvetica Neue";
+}
+
+#container {
+  @include container;
+}
+
+#conf-name {
+  text-align: center;
+}
+
+#info {
+  @include column(8);
+  background: #fff;
+  li:nth-child(even) {
+    @include column(4);
+  }
+  li:nth-child(odd) {
+    @include column(4, true);
+  }
+  strong {
+    text-transform: uppercase;
+  }
+}
+
+#nav {
+  @include column(4, true);
+}
