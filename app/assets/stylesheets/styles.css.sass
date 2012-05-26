@@ -1,0 +1,85 @@
+body 
+  background: 
+    color: #333
+    image: url(asset_path("tire.png", "image"))
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+
+#container 
+  +grid-container
+
+
+#logo
+  text-align: center
+  margin: 40px 0
+
+#info 
+  +grid(8)
+  background: #000
+  background: rgba(0, 0, 0, 0.5)
+  color: $cream
+  font-size: 1.5em
+  font-family: "League Gothic"
+  ul
+    float: left
+    margin: 40px 20px
+  li
+    float: left
+    margin: 10px
+    &:nth-child(odd)
+      +grid(4)
+    strong
+      display: block
+      background: 
+        image: url(asset_path("icons.png", "image"))
+        repeat: no-repeat
+        position: 0 0
+      padding-left: 38px
+      margin-bottom: 10px
+      &.what
+        background-position: 0 -178px
+      &.when
+        background-position: 0 -115px
+      &.how_much
+        background-position: 0 6px
+      &.where
+        background-position: 0 -54px
+
+  
+  strong 
+    text-transform: uppercase
+    color: $lightyellow
+    font-size: 1.8em
+  
+#nav 
+  +grid(3)
+  margin-left: 40px
+  font-family: "League Gothic"
+  font-size: 1.5em
+  ul
+    margin-top: 45%
+  li
+    padding-left: 20px
+    margin-top: 10px
+    background: 
+      image: url(asset_path("icons.png", "image"))
+      repeat: no-repeat
+      position: 0 -234px
+    &.register
+      background: 
+        image: url(asset_path("register_button.png", "image"))
+        repeat: no-repeat
+        position: 0 0
+      height: 37px
+      width: 187px
+      margin-top: 40px
+      +hide-text
+      a
+        display: block
+      &:hover
+        background:
+          position: 0 -42px
+
+
+#palestrantes
+  clear: both

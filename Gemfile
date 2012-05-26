@@ -8,6 +8,7 @@ group :assets do
   gem 'compass-rails'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'slim'
+  gem 'compass-960-plugin'
 
   # gem 'therubyracer', :platform => :ruby
 

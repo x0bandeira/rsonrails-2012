@@ -1,29 +1,32 @@
 #container
-  h1#conf-name RS on Rails 2012
-
+  h1#logo
+    = image_tag("rsonrails_logo.png", :alt => 'RS on Rails')
   #info
     ul
       li
-        strong O Que?
+        strong.what O Que?
         h2 O maior evento de Ruby do Sul
 
       li
-        strong Quando?
+        strong.when Quando?
         h2 07 de Julho de 2012, 9h
 
       li
-        strong Quanto?
-        h2 R$50 estudante, R$70 profissional
+        strong.where Onde?
+        h2 FACIN, PUCRS
 
       li
-        strong Onde?
-        h2 FACIN, PUCRS
+        strong.how_much Quanto?
+        h2 R$50 estudante, R$70 profissional
+
 
   #nav
     ul
       li
         a href="#palestrantes" Palestrantes
       li
+        a href="#palestras" Palestras
+      li.register
         a href="#inscricoes" Garanta sua vaga
 
   #palestrantes
