@@ -1,50 +1,66 @@
-#container
-  h1#logo
-    = image_tag("rsonrails_logo.png", :alt => 'RS on Rails')
-  #info
-    ul
-      li
-        strong.what O Que?
-        h2 O maior evento de Ruby do Sul
+header
+  .container
+    h1#logo
+      = image_tag("rsonrails_logo.png", :alt => 'RS on Rails')
 
-      li
-        strong.when Quando?
-        h2 07 de Julho de 2012, 9h
+  #info_bg
+  .container
+    #info
+      ul
+        li
+          strong.what O Que?
+          h2 O maior evento de Ruby do Sul
 
-      li
-        strong.where Onde?
-        h2 FACIN, PUCRS
+        li
+          strong.when Quando?
+          h2 07 de Julho de 2012, 9h
 
-      li
-        strong.how_much Quanto?
-        h2 R$50 estudante, R$70 profissional
+        li
+          strong.where Onde?
+          h2 FACIN, PUCRS
 
+        li
+          strong.how_much Quanto?
+          h2 R$50 estudante, R$70 profissional
 
-  #nav
-    ul
-      li
-        a href="#palestrantes" Palestrantes
-      li
-        a href="#palestras" Palestras
-      li.register
-        a href="#inscricoes" Garanta sua vaga
+    #nav
+      ul
+        li
+          a href="#palestrantes" Palestrantes
+        li
+          a href="#palestras" Palestras
+        li.register
+          a href="#inscricoes" Garanta sua vaga
 
-  #palestrantes
+    .clear
+
+#palestrantes
+  .container
     strong.title Palestrantes
     ul
       - 7.times do
         li
           h2 Fulano de Tal
-          img src="?#"
+          .imgbox
+            span
+              = image_tag("palestrantes/maiz.jpg", :alt => 'Juan Maiz')
           p 
             | Lorem ipsum dolor sit amet. 
             | Baconinpsum es muinitisso gostoso.
             | Comendadore faizeamno amasda, lorgas.
           .links
             a href="/blog" Blog
+            |  | 
             a href="/twitter" Twitter
 
-  #patrocinio
+#palestras
+  .container
+    strong.title Palestras
+    iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=320&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23FFFFFF&amp;src=en.brazilian%23holiday%40group.v.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="800" height="320" frameborder="0" scrolling="no"
+
+
+#patrocinio
+  .container
     strong Patrocínio
     strong Apoio
 

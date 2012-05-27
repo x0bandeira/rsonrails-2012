@@ -1,22 +1,42 @@
 body 
   background: 
     color: #333
-    image: url(asset_path("tire.png", "image"))
+
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
 
-#container 
+.bg
+  z-index: 999
+  position: fixed
+  height: 100%
+  width: 2px
+  background:
+    image: url(asset_path("bg.png", "image"))
+    repeat: y-repeat
+    position: left
+
+.container 
   +grid-container
 
+header
+  background:
+    image: url(asset_path("tire.png", "image"))
 
 #logo
   text-align: center
-  margin: 40px 0
+  padding: 40px 0
+
+#info_bg
+  background:
+    image: url(asset_path("about_bg.png", "image"))
+  height: 280px
+  width: 62%
+  position: absolute
 
 #info 
+  margin-bottom: 80px
+  position: relative
   +grid(8)
-  background: #000
-  background: rgba(0, 0, 0, 0.5)
   color: $cream
   font-size: 1.5em
   font-family: "League Gothic"
@@ -81,5 +101,56 @@ body
           position: 0 -42px
 
 
+#palestrantes, #palestras
+  clear: both
+  padding: 80px 0
+  color: $aqua
+  overflow: hidden
+  background:
+    image: url(asset_path("crosshatch.png", "image"))
+    repeat: repeat
+
+#palestras
+  background:
+    image: none
+    color: $lightyellow
+  color: $red
+
 #palestrantes
   clear: both
+  color: $aqua
+  overflow: hidden
+  background:
+    image: url(asset_path("crosshatch.png", "image"))
+    repeat: repeat
+
+  li
+    +grid(4)
+    background: #333
+    background: rgba(0, 0, 0, 0.5)
+    padding: 10px
+    padding-left: 80px
+    margin: 10px 10px 40px 70px
+    position: relative
+  h2
+    font-family: "League Gothic"
+    font-size: 1.5em
+    text-transform: uppercase
+  p
+    margin: 10px 0
+    line-height: 1.3em
+
+  .imgbox
+    position: absolute
+    top: -10px
+    left: -70px
+    span
+      display: block
+      width: 140px
+      height: 140px
+      +border-radius(100px)
+      overflow: hidden
+
+  .links
+    font-size: 0.9em
+    float: right
