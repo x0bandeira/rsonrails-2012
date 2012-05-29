@@ -13,11 +13,11 @@ header
 
         li
           strong.when Quando?
-          h2 07 de Julho de 2012, 9h
+          h2 Segundo Semestre
 
         li
           strong.where Onde?
-          h2 FACIN, PUCRS
+          h2 Porto Alegre
 
         li
           strong.how_much Quanto?
@@ -25,43 +25,53 @@ header
 
     #nav
       ul
-        li
-          a href="#palestrantes" Palestrantes
-        li
-          a href="#palestras" Palestras
+        /!
+          li
+            a href="#palestrantes" Palestrantes
+          li
+            a href="#palestras" Palestras
         li.register
-          a href="#inscricoes" Garanta sua vaga
+          a href="http://rsonrails.malaio.me/" Garanta sua vaga
 
     .clear
+  /!
+    #palestrantes
+      .container
+        strong.title Palestrantes
+        ul
+          - 7.times do
+            li
+              h2 Fulano de Tal
+              .imgbox
+                span
+                  = image_tag("palestrantes/maiz.jpg", :alt => 'Juan Maiz')
+              p 
+                | Lorem ipsum dolor sit amet. 
+                | Baconinpsum es muinitisso gostoso.
+                | Comendadore faizeamno amasda, lorgas.
+              .links
+                a href="/blog" Blog
+                |  | 
+                a href="/twitter" Twitter
 
-#palestrantes
-  .container
-    strong.title Palestrantes
-    ul
-      - 7.times do
+  /!
+    #palestras
+      .container
+        strong.title Palestras
+        iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=320&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23FFFFFF&amp;src=en.brazilian%23holiday%40group.v.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="800" height="320" frameborder="0" scrolling="no"
+
+
+  #patrocinio
+    .container
+      strong Patrocínio
+      a href="mailto:rafael.bandeira@thoughtworks.com" Coloque a sua empresa aqui!
+      strong Organização
+      ul
         li
-          h2 Fulano de Tal
-          .imgbox
-            span
-              = image_tag("palestrantes/maiz.jpg", :alt => 'Juan Maiz')
-          p 
-            | Lorem ipsum dolor sit amet. 
-            | Baconinpsum es muinitisso gostoso.
-            | Comendadore faizeamno amasda, lorgas.
-          .links
-            a href="/blog" Blog
-            |  | 
-            a href="/twitter" Twitter
-
-#palestras
-  .container
-    strong.title Palestras
-    iframe src="https://www.google.com/calendar/embed?mode=AGENDA&amp;height=320&amp;wkst=1&amp;hl=pt_BR&amp;bgcolor=%23FFFFFF&amp;src=en.brazilian%23holiday%40group.v.calendar.google.com&amp;color=%23B1440E&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="800" height="320" frameborder="0" scrolling="no"
-
-
-#patrocinio
-  .container
-    strong Patrocínio
-    strong Apoio
+          a href="http://join.thoughtworks.com" ThoughtWorks
+        li
+          a href="http://engage.is" Engage
+      strong Apoio
+      a href="mailto:rafael.bandeira@thoughtworks.com" Tem alguma idéia? Entre em contato!
 
 
